@@ -53,11 +53,14 @@ public class AL008_remove_removeAll_removeIf {
 	    numbers.add(6);
 	    numbers.add(1);
 	    numbers.removeIf( n -> n % 2 == 0 );
-	    System.out.println(numbers);
+	   	    System.out.println(numbers);
 	    
 	    //Output
 	    //[5, 9, 1]
-
+	   	 numbers.remove(Integer.valueOf(9)); //if want to remove via value intead of in dex 
+	   	 System.out.println(numbers);
+	   	 //[5, 1]
+	   	 					
 	}
 
 }

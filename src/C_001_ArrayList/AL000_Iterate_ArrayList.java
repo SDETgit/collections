@@ -5,7 +5,19 @@ import java.util.Iterator;
 import java.util.List;
 
 public class AL000_Iterate_ArrayList {
-
+	//Java ArrayList class uses a dynamic array for storing the elements. It is like an array, but there is no size
+	// limit. We can add or remove elements anytime
+	// 
+	//->Java ArrayList class can contain duplicate elements.
+	//->Java ArrayList class maintains insertion order.
+	//->Java ArrayList class is non synchronized.
+	//->Java ArrayList allows random access because the array works on an index basis.
+	//->In ArrayList, manipulation is a little bit slower than the LinkedList in Java because a lot of shifting needs 
+	//->to occur if any element is removed from the array list.
+	//->We can not create an array list of the primitive types, such as int, float, char, etc. It is required to use 
+	//->the required wrapper class in such cases. For example:
+	//1. ArrayList<int> al = ArrayList<int>(); // does not work  
+	//2. ArrayList<Integer> al = new ArrayList<Integer>(); // works fine  
 	public static void main(String[] args) {
 		
 		//void add(int index, E element)

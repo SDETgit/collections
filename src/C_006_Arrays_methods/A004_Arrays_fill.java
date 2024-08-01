@@ -9,11 +9,13 @@ public class A004_Arrays_fill {
 		
 		int [] num = new int[5];
 		System.out.println(Arrays.toString(num));
+		num[0] = 9;
+		System.out.println(Arrays.toString(num));
 		Arrays.fill(num, 4);
 		System.out.println(Arrays.toString(num));
 		
 	//  output 
-	//	[0, 0, 0, 0, 0]
+	//	[9, 0, 0, 0, 0]
 	//	[4, 4, 4, 4, 4]
 		
 		

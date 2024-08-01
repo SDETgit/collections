@@ -2,6 +2,7 @@ package C_005_TreeSet;
 
 import java.util.TreeSet;
 import java.util.TreeSet;
+import java.util.Iterator;
 import java.util.List;
 //Order: TreeSet does not maintains insertion order but it maintains insertion of element in natural order say in lexicographically as in dictionary 
 //Performance: It provides log(n) time cost for basic operations like add, remove, and contains, which is less 
@@ -9,8 +10,11 @@ import java.util.List;
 //Null Elements: TreeSet does not allow null elements.
 //NavigableSet: TreeSet implements NavigableSet, which provides methods for navigating the set such as lower,
 //floor, ceiling, and higher.
-//TreeSet is useful when you need a Set implementation that maintains elements in a sorted order and allows for
-//efficient navigation of elements based on their order.
+//Java TreeSet class contains unique elements only like HashSet.
+//Java TreeSet class access and retrieval times are quiet fast.
+//Java TreeSet class doesn't allow null element.
+//Java TreeSet class is non synchronized.
+//Java TreeSet class maintains ascending order.
 public class AL000_Iterate_TreeSet {
 
 	public static void main(String[] args) {
@@ -21,32 +25,25 @@ public class AL000_Iterate_TreeSet {
         list.add("Apple");
         list.add("Banana");
         list.add("Cherry");
+        
+        //1
         System.out.println(list); // Output: [Apple, Banana, Cherry]
         
+        //2 For each loop 
+        for(String e : list)
+        {
+        	System.out.println(e);
+        	
+        }
         
-        //addAll
+        //3 Using iterator 
+        Iterator it = list.iterator();
         
-        TreeSet<String> list1 = new TreeSet<>();
-        list1.add("Apple");
-        list1.add("Banana");
-
-        TreeSet<String> list2 = new TreeSet<>();
-        list2.add("Cherry");
-        list2.add("Date");
-
-        list1.addAll(list2);
-        System.out.println(list1); // Output: [Apple, Banana, Cherry, Date]
+        while(it.hasNext())
+        {
+        	System.out.println(it.next());
+        }
         
-        TreeSet<String> list3 = new TreeSet<>();
-        list3.add("Apple");
-        list3.add("Banana");
-
-        TreeSet<String> list4 = new TreeSet<>();
-        list4.add("Cherry");
-        list4.add("Date");
-
-        list3.addAll(list4); // Insert list2 at index 1
-        System.out.println(list3); // Output: [Apple, Banana, Cherry, Date]
          
 
 	}

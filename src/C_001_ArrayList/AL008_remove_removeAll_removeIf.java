@@ -45,7 +45,7 @@ public class AL008_remove_removeAll_removeIf {
 	    System.out.println(cars1);  //A-B 
 //	    [BMW, Toyota]
 
-	    
+	    //public boolean removeIf(Predicate condition) A Predicate object or lambda expression which tests an item from the list.
 	    ArrayList<Integer> numbers = new ArrayList<Integer>();
 	    numbers.add(5);
 	    numbers.add(9);
@@ -54,6 +54,8 @@ public class AL008_remove_removeAll_removeIf {
 	    numbers.add(1);
 	    numbers.removeIf( n -> n % 2 == 0 );
 	   	    System.out.println(numbers);
+	   	    
+	   	valid.removeIf(n -> n.charAt(0)=='S');
 	    
 	    //Output
 	    //[5, 9, 1]

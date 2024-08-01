@@ -1,10 +1,18 @@
 package C_002_LinkedList;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
 public class LL000_Iterate_LinkedList {
+	//Java LinkedList class uses a doubly linked list to store the elements. It provides a linked-list data //structure. It inherits the AbstractList class and implements List and Deque interfaces.
+
+	//Java LinkedList class can contain duplicate elements.
+	//Java LinkedList class maintains insertion order.
+	//Java LinkedList class is non synchronized.
+	//In Java LinkedList class, manipulation is fast because no shifting needs to occur.
+	//Java LinkedList class can be used as a list, stack or queue.	
 
 	public static void main(String[] args) {
 		
@@ -16,41 +24,44 @@ public class LL000_Iterate_LinkedList {
 		        list.add("Cherry");
 		        System.out.println(list); // Output: [Apple, Banana, Cherry]
 		        
-		        
-		        list.add(1, "Blueberry"); // Insert "Blueberry" at index 1
+		        //1		        list.add(1, "Blueberry"); // Insert "Blueberry" at index 1
 		        System.out.println(list); // Output: [Apple, Blueberry, Banana, Cherry]
 		        
-		        //addAll
+		        //2 for loop
+		        for(int i=0;i<list.size();i++)
+		        {
+		        	System.out.println("LinkedList Elements :- "+list.get(i));
+		        }
 		        
-		        LinkedList<String> list1 = new LinkedList<>();
-		        list1.add("Apple");
-		        list1.add("Banana");
-
-		        List<String> list2 = new LinkedList<>();
-		        list2.add("Cherry");
-		        list2.add("Date");
-
-		        list1.addAll(list2);
-		        System.out.println(list1); // Output: [Apple, Banana, Cherry, Date]
+		        //3 while loop 
 		        
-		        LinkedList<String> list3 = new LinkedList<>();
-		        list3.add("Apple");
-		        list3.add("Banana");
-
-		        List<String> list4 = new LinkedList<>();
-		        list4.add("Cherry");
-		        list4.add("Date");
-
-		        list3.addAll(1, list4); // Insert list2 at index 1
-		        System.out.println(list3); // Output: [Apple, Cherry, Date, Banana]
+		        int i =0;
+		        while(i<list.size())
+		        {
+		        	System.out.println("LinkedList while loop " +list.get(i));
+		        	i++;
+		        }
 		        
-		        //In Java, the set() method in the LinkedList class is used to replace
-		        //the element at a specific position (index) with a new element.
-		        System.out.println(list); //[Apple, Blueberry, Banana, Cherry]
-		        String el=  list.set(1, "Bluebe"); //replaced element will be stored in el
-		        System.out.println(list); // Output: [Apple, Bluebe, Banana, Cherry]
-		        System.out.println(el); //Blueberry
-
+		        //4 Enhanced for loop 
+		        for(String ele : list )
+		        {
+		        	System.out.print(ele+" ");
+		        }
+		        
+		        System.out.println();
+		        //5 Using iterator 
+		        
+		        Iterator it = list.iterator();
+		        
+		        while(it.hasNext())
+		        {
+		        	System.out.println(it.next());
+		        }
+		        
+		        
+		        
+		        
+		    
 	}
 
 }

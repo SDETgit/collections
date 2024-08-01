@@ -3,6 +3,7 @@ package C_006_Arrays_methods;
 import java.util.Arrays;
 
 public class A001_Arrays_compare {
+	
 	static class Person implements Comparable<Person> {
 	    String name;
 	    int age;
@@ -51,6 +52,10 @@ public class A001_Arrays_compare {
 	        int result2 = Arrays.compare(array2, array3);
 
 	        int result3 = Arrays.compare(array3, array1);
+	        
+	      //Returns 0 if the arrays are equal.
+	      //Returns a negative integer if the array1 is less than array2 lexicographically
+	      //Returns a positive integer if array1 is greater than array2 lexicographically.
 	        
 	        // Compare array1 and array3
 	        System.out.println("Comparing array1 and array2: " + result1); // Output: 0

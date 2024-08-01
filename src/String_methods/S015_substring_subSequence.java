@@ -5,7 +5,7 @@ public static void main(String[] args) {
 	
 	String str = "Hello, World!";
 	String substr = str.substring(7); // "World!"
-	System.out.println(substr);
+	System.out.println(substr);  //Here string is returned from the 7th char starting 0 
 	
 	String str1 = "Hello, World!";
 	String substr1 = str.substring(7, 12); 

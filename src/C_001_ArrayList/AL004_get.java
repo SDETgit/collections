@@ -14,10 +14,12 @@ public class AL004_get {
 	    cars.add("Mazda");
 	    System.out.println(cars.get(0));
 	    System.out.println(cars.get(1));
+	    System.out.println(String.valueOf("Volvo"));
 	    
 //	    output:-
 //	    Volvo
 //	    BMW
+//	    Volvo
 
 
 	}

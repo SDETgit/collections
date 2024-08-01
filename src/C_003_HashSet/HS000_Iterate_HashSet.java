@@ -1,12 +1,19 @@
 package C_003_HashSet;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.HashSet;
 import java.util.List;
 //No Duplicates: HashSet does not allow duplicate elements. If you try to add a duplicate, the add method will return false.
 //Order: HashSet does not maintain any order for its elements. If you need ordered elements, consider using LinkedHashSet or TreeSet.
 //Performance: HashSet provides constant-time performance for basic operations like add, remove, contains, and size, 
 //assuming the hash function disperses elements properly among the buckets.
+//HashSet stores the elements by using a mechanism called hashing.
+//HashSet contains unique elements only.
+//HashSet allows null value.
+//HashSet class is non synchronized.
+//HashSet doesn't maintain the insertion order. Here, elements are inserted on the basis of their hashcode.
+//HashSet is the best approach for search operations.
 
 public class HS000_Iterate_HashSet {
 
@@ -18,34 +25,26 @@ public class HS000_Iterate_HashSet {
         list.add("Apple");
         list.add("Banana");
         list.add("Cherry");
+      
+        //1
         System.out.println(list); // Output: [Apple, Cherry, Banana]
         
         
+        //2 Using iterator 
+        Iterator it = list.iterator();
         
+        while (it.hasNext())
+        {
+        System.out.println(it.next());
+        }
         
-        //addAll
+        //3 using for each loop 
         
-        HashSet<String> list1 = new HashSet<>();
-        list1.add("Apple");
-        list1.add("Banana");
-
-        HashSet<String> list2 = new HashSet<>();
-        list2.add("Cherry");
-        list2.add("Date");
-
-        list1.addAll(list2);
-        System.out.println(list1); // Output: [Apple, Cherry, Date, Banana]
-        
-        HashSet<String> list3 = new HashSet<>();
-        list3.add("Apple");
-        list3.add("Banana");
-
-        HashSet<String> list4 = new HashSet<>();
-        list4.add("Cherry");
-        list4.add("Date");
-
-        list3.addAll(list4); // Insert list2 at index 1
-        System.out.println(list3); // Output: [Apple, Cherry, Date, Banana]
+        for(String e :list)
+        {
+        	System.out.println(e);
+        }
+      
       
        
 

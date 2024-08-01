@@ -36,6 +36,15 @@ public static void main(String[] args) {
 	  // or
 	  
 	  System.out.println(car);
+	//Hello, World!
+	//Ford
+	//Mustang
+	//red
+	//2021
+	//Ford
+	//Mustang
+	//red
+	//2021
 
 	    
 	 }

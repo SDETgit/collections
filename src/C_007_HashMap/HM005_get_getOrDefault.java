@@ -13,8 +13,9 @@ public class HM005_get_getOrDefault {
 		    capitalCities.put("Norway", "Oslo");
 		    capitalCities.put("USA", "Washington DC");
 		    System.out.println(capitalCities.get("USA"));
+		    System.out.println(capitalCities.get("USA2"));
 		    //Washington DC
-		    
+		    //null
     //getOrDefault 
     //public V get(Object key, V def)
 	//If the entry does not exist then the value of the second parameter is returned.	    

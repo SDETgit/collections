@@ -10,7 +10,8 @@ public class AL000_Iterate_ArrayList {
 	// 
 	//->Java ArrayList class can contain duplicate elements.
 	//->Java ArrayList class maintains insertion order.
-	//->Java ArrayList class is non synchronized.
+	//->Java ArrayList class is non synchronized. means "not thread-safe," If one thread is iterating over the TreeMap while another thread is modifying it 
+	//(e.g., adding or removing entries), this can cause problems such as ConcurrentModificationException, data corruption, or other inconsistencies.
 	//->Java ArrayList allows random access because the array works on an index basis.
 	//->In ArrayList, manipulation is a little bit slower than the LinkedList in Java because a lot of shifting needs 
 	//->to occur if any element is removed from the array list.
